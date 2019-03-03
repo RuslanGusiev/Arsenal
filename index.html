@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Russian muscle cars">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <title>Arsenal</title>
+  <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/arsenal-fc.png" type="image/png">
+</head>
+<body>
+    <header>
+      <div id="about">
+        <a href="index.html">Home</a>
+        <a href="" >Categories</a>
+        <a href="" >Random</a>
+      </div>
+    </header>
+
+    <div id="app">
+        <button @click="show = !show" id="sortButton">Sort A->Z</button>
+        <ul>
+            <li v-for="(player, index) in sortedArray.slice(0,10)" :key="index">
+                <details>
+                    <summary class="name">{{ player.strPlayer }}</summary>
+                    <img :src=player.strThumb :alt=player.strPlayer class="img">
+                    <p><b>Nationality</b>: {{ player.strNationality }}</p>
+                    <p><b>Date born</b>: {{ player.dateBorn }}</p>
+                    <p><b>Position</b>: {{ player.strPosition }}</p>
+                    <p><b>Height</b>: {{ player.strHeight }}</p>
+                    <p><b>Weight</b>: {{ player.strWeight }}</p>
+                    <p><b>Description</b>: {{ player.strDescriptionEN }}</p>
+                </details>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>Posted by: <b>Ruslan Gusiev</b></p>
+        <p>Contact information: <b><a href="mailto:ragusiev@gmail.com" id="last">
+            ragusiev@gmail.com</a></b>.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
