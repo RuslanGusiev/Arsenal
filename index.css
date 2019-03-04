@@ -39,12 +39,12 @@ header {
 }
 
 #about {
-        float: left;
-        width: 100%;
-        text-align: center;
-        padding-top: 15px;
-        font-size: 2.4em;
-    }
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 2.4em;
+}
 
 #about>a:hover {
     color: black;
