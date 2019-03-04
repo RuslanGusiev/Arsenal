@@ -13,8 +13,8 @@
     <header>
       <div id="about">
         <a href="index.html">Home</a>
-        <a href="" >Categories</a>
-        <a href="" >Random</a>
+        <a href="">Categories</a>
+        <a href="">Random</a>
       </div>
     </header>
 
@@ -31,8 +31,10 @@
                     <p><b>Height</b>: {{ player.strHeight }}</p>
                     <p><b>Weight</b>: {{ player.strWeight }}</p>
                     <p><b>Description</b>: {{ player.strDescriptionEN }}</p>
+                    <p>{{ getR(0,10) }}</p>
                 </details>
             </li>
+        </ul>
         </ul>
     </div>
 
@@ -40,6 +42,7 @@
         <p>Posted by: <b>Ruslan Gusiev</b></p>
         <p>Contact information: <b><a href="mailto:ragusiev@gmail.com" id="last">
             ragusiev@gmail.com</a></b>.</p>
+        <a href="sitemap.xml">Sitemap</a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
